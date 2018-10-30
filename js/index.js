@@ -63,7 +63,7 @@ function getByGeo() {
     navigator.geolocation.getCurrentPosition(function(position) {
         let lon = position.coords.longitude;
         let lat = position.coords.latitude;
-        const url = `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appid}&units=metric`;
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${appid}&units=metric`;
         loadJSON(url, displayWeather, (err) => { console.error(err) });
     });
 }
