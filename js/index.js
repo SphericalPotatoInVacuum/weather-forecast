@@ -51,7 +51,7 @@ function getWeather() {
     if (id == undefined) {
         return alert('You should choose the city name from suggested results. We don\'t have information on other cities');
     }
-    const url = `http://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${appid}&units=metric`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?id=${id}&appid=${appid}&units=metric`;
     loadJSON(url, displayWeather, (err) => { console.error(err) });
 }
 
