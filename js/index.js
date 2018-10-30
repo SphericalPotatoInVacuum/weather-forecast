@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     weatherIcon = document.getElementById('weather-icon');
 
-    loadJSON('weather-forecast/ids.json', (data) => { ids = data }, (err) => { console.error(err) });
-    loadJSON('weather-forecast/cities.json', (data) => {
+    loadJSON('https://sphericalpotatoinvacuum.github.io/weather-forecast/ids.json', (data) => { ids = data }, (err) => { console.error(err) });
+    loadJSON('https://sphericalpotatoinvacuum.github.io/weather-forecast/cities.json', (data) => {
         citiesAutocomplete = data;
         let elems = document.querySelectorAll('.autocomplete');
         let instances = M.Autocomplete.init(elems, {
