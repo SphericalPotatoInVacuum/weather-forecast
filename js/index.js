@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     weatherIcon = document.getElementById('weather-icon');
 
-    loadJSON('../ids.json', (data) => { ids = data }, (err) => { console.error(err) });
-    loadJSON('../cities.json', (data) => {
+    loadJSON('ids.json', (data) => { ids = data }, (err) => { console.error(err) });
+    loadJSON('cities.json', (data) => {
         citiesAutocomplete = data;
         let elems = document.querySelectorAll('.autocomplete');
         let instances = M.Autocomplete.init(elems, {
